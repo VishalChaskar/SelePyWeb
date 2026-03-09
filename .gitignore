@@ -1,0 +1,43 @@
+# Environment variables
+.env
+.env.local
+*.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.pytest_cache/
+
+# Test reports (generated on each run)
+reports/report.html
+reports/screenshots/
+reports/allure-results/
+
+# Keep the reports folder tracked in git
+!reports/.gitkeep
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Webdriver binaries (downloaded automatically by webdriver-manager)
+.wdm/
+drivers/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
