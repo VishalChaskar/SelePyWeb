@@ -7,3 +7,4 @@ class TestHomePage:
         homepage = HomePage(self.driver)
         title = homepage.get_title()
         assert title is not None, f"Page title is: {title}"
+        #
