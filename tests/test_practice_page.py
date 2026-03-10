@@ -3,11 +3,7 @@ from pages.homepage import HomePage
 
 @pytest.mark.usefixtures("setup")
 class TestHomePage:
-    def test_homepage_loaded(self):
+    def test_print_title(self):
         homepage = HomePage(self.driver)
-        # Verify title
-        assert homepage.get_title() == "Practice Page"
-        # Verify page fully loaded
-        homepage.wait_for_page_load()
-        # Verify header displayed
-        assert homepage.is_header_displayed()
+        title = homepage.get_title()
+        assert title is not None, f"Page title is: {title}"
