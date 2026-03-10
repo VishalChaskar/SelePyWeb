@@ -1,0 +1,13 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'selenium-auto-py:$SHORT_SHA', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'run'
+      - '--rm'
+      - '-e'
+      - 'HEADLESS=true'
+      - '-e'
+      - 'BASE_URL=$_BASE_URL'
+      - 'selenium-auto-py:$SHORT_SHA'
+timeout: '600s'
